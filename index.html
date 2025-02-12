@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walentynka</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #message {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ff9999;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Czy zostaniesz moją walentynką?</h1>
+    <button id="yesButton">Tak</button>
+    <button id="noButton">Nie</button>
+    <div id="message">
+      <p>Kocham cię Julcia, przepraszam, że nie mogłem zapytać na żywo</p>
+      <!-- Tutaj dodaj zdjęcie -->
+      <img src="URL_DO_ZDJĘCIA" alt="Kocham cię Julcia">
+    </div>
+  </div>
+  <script>
+    // Po kliknięciu przycisku "Tak" pokazujemy obrazek
+    document.getElementById('yesButton').onclick = function() {
+      document.getElementById('message').style.display = 'block';
+    };
+
+    // Kliknięcie przycisku "Nie" – zmiana tekstu na "Tak"
+    document.getElementById('noButton').onclick = function() {
+      this.innerText = 'Tak';
+    };
+  </script>
+</body>
+</html>
